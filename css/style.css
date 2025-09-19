@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar links */
+.nav-link {
+  color: #fff !important;
+}
+.nav-link:hover {
+  color: #ff0000 !important;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  border: none;
+  min-width: 200px;
+}
+.dropdown-item:hover {
+  background-color: #ff0000;
+  color: #fff !important;
+}
+
+/* Hero background */
+.sectionOne {
+  position: relative;
+  background: url('../images/background-img-1.jpeg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.sectionOne::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Hero content */
+.sectionContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+.firstText h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.firstText h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Hero button */
+#pledge {
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#pledge:hover {
+  background-color: #cc0000;
+}
+
+/* Cards */
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+.big-card {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.big-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #ff0000 !important;
+}
+.footer-icons a {
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+.footer-icons a:hover {
+  color: #ff0000 !important;
+}
+
+/* Dropdown hover only for desktop */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .firstText h1 {
+    font-size: 2rem;
+  }
+  .firstText h3 {
+    font-size: 1.2rem;
+  }
+  .sectionContent {
+    padding-left: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  #pledge {
+    padding: 15px 25px;
+  }
+  .sectionOne::before {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .card img {
+    height: 150px;
+  }
+}

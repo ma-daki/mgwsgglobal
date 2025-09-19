@@ -1,0 +1,143 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-link {
+  color: #fff !important;
+}
+.nav-link:hover {
+  color: #ff0000 !important;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  border: none;
+  min-width: 200px;
+}
+.dropdown-item:hover {
+  background-color: #ff0000;
+  color: #fff !important;
+}
+/* Hero Section */
+.sectionOne {
+  position: relative;
+  background: url('../images/background-img-1.jpeg') no-repeat center center/cover;
+  height: 70vh;
+}
+.sectionOne::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+}
+.sectionContent {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+.sectionContent h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Fellowship Section */
+section h2 {
+  color: #000;
+  margin-bottom: 1rem;
+}
+section p {
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.wrapper{
+  /* border: 1px solid #000; */
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(to right,
+  rgba(0,0,0,0),
+  rgba(0,0,0,1) 20%,
+  rgba(0,0,0,1) 80%,
+  rgba(0,0,0,0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+.item {
+  width: 200px;
+  height: 100px;
+  background-image: url('../images/background-img-1.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1{
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+.item2{
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+.item3{
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+.item4{
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+.item5{
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+.item6{
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+.item7{
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+.item8{
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+}
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer a:hover {
+  color: #ff0000 !important;
+}
+.footer-icons a {
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+.footer-icons a:hover {
+  color: #ff0000 !important;
+}
+/* Dropdown hover only on desktop */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
