@@ -25,12 +25,13 @@
 /* Hero background */
 .sectionOne {
   position: relative;
-  background: url('../images/background-img-1.jpeg') no-repeat center center;
-  background-size: cover;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  transition: background-image 1s ease-in-out; 
 }
+
 .sectionOne::before {
   content: "";
   position: absolute;

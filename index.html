@@ -91,8 +91,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <div class="sectionOne d-flex align-items-center"
-  style="background: url('images/background-img-1.jpeg') no-repeat center center; background-size: cover;">
+  <div class="sectionOne d-flex align-items-center">
     <div class="container-fluid sectionContent text-start text-md-start px-3 px-md-5">
       <div class="firstText">
         <h1>Welcome to <br> My Generation Will Serve God</h1>
@@ -224,5 +223,29 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+  var sectionOne = document.querySelector(".sectionOne");
+  var images = [
+    "images/background-img-1.jpeg",
+    "images/events-wallpaper.jpg",
+    "images/edward-cisneros-QSa-uv4WJ0k-unsplash.jpg",
+    "images/istockphoto-2205572960-1024x1024.jpg",
+    "images/istockphoto-2155998573-1024x1024.jpg"
+  ];
+
+  var i = 0;
+
+  function slider() {
+    if (i >= images.length) {
+      i = 0;
+    }
+    sectionOne.style.backgroundImage = "url('" + images[i] + "')";
+    i++;
+    setTimeout(slider, 5000); // change every 3s
+  }
+
+  window.onload = slider;
+</script>
+
 </body>
 </html>
